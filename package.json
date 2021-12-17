@@ -1,0 +1,16 @@
+{
+  "name": "automationguild22before",
+  "version": "1.0.0",
+  "description": "Cypress test project with API calls and UI tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Kristin Jackvony",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^9.1.1"
+  }
+}
