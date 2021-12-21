@@ -25,7 +25,7 @@ Cypress.Commands.add('addContact', (firstName) => {
     cy.get('#postalCode').type('01234')
     cy.get('#country').type('USA')
     cy.get('#submit').click()
-    const id = cy.contains('td',firstName).siblings().first().invoke('text').then(text => Cypress.env('id', text))
+    cy.contains('td',firstName).siblings().first().invoke('text').then(text => Cypress.env('id', text))
 })
 
 Cypress.Commands.add('addContactAPI', (firstName) => {
@@ -64,6 +64,6 @@ Cypress.Commands.add('deleteContactAPI', () => {
     cy.request({
         method: 'DELETE',
         url: `http://thinking-tester-contact-list.herokuapp.com/contacts/${Cypress.env('id')}`,
-        headers: {'Authorization': `Bearer ${Cypress.env('token')}` },
+        headers: {'Authorization': `Bearer ${Cypress.env('token')}` }
     })
 })
